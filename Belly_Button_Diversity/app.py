@@ -22,13 +22,13 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DATABASE_URL', '') or "s
 db = SQLAlchemy(app)
 
 # reflect an existing database into a new model
-Base = automap_base()
-# reflect the tables
-Base.prepare(db.engine, reflect=True)
-
-# Save references to each table
-Samples_Metadata = Base.classes.sample_metadata
-Samples = Base.classes.samples
+# Base = automap_base()
+# # reflect the tables
+# Base.prepare(db.engine, reflect=True)
+#
+# # Save references to each table
+# Samples_Metadata = Base.classes.sample_metadata
+# Samples = Base.classes.samples
 
 
 @app.route("/")
